@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 
 app.get('/items', async (req, res) => {
   const storedItems = await getStoredItems();
-  await new Promise((resolve, reject) => setTimeout(() => resolve(), 2000));
+  await new Promise((resolve, reject) => setTimeout(() => resolve()));
   res.json({ items: storedItems });
 });
 
@@ -39,4 +39,4 @@ app.post('/items', async (req, res) => {
   res.status(201).json({ message: 'Stored new item.', item: newItem });
 });
 
-app.listen(3000);
+app.listen(3005);
