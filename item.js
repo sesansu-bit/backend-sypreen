@@ -8,10 +8,8 @@ async function getStoredItems() {
   return JSON.parse(data);
 }
 
-async function storeItems(items) {
-  await fs.writeFile(filePath, JSON.stringify(items, null, 2));
-}
 
-module.exports = { getStoredItems, storeItems };
+
+module.exports = { getStoredItems };
 
  
